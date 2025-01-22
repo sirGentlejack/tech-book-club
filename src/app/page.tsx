@@ -1,101 +1,285 @@
 import Image from "next/image";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="">
+      <Head>
+        <title>Home</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+      </Head>
+      <div className="leading-4 min-h-screen margin mx-auto lg:max-w-7xl">
+        <header className="shadow">
+          <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 className="text-2xl lg:text-4xl ">Tech Book Club</h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+            {/* <nav className="space-x-6">
+            <a href="#about" className="text-gray-600 hover:text-gray-800">About</a>
+            <a href="#services" className="text-gray-600 hover:text-gray-800">Services</a>
+            <a href="#contact" className="text-gray-600 hover:text-gray-800">Contact</a>
+          </nav> */}
+          </div>
+        </header>
+
+        <main className="container mx-auto px-6 py-12">
+          <section className="grid grid-cols-2 gap-4 place-items-center">
+            <div className="text-left max-w-lg">
+              <h2
+                className="leading-6 text-4xl bg-clip-text text-transparent bg-gradient-to-tl from-black via-stone-700  to-yellow-700 
+                dark:bg-gradient-to-tl dark:from-white dark:via-stone-700  dark:to-black 
+                md:text-7xl lg:text-8xl"
+              >
+                Join the ultimate tech book club
+              </h2>
+              <p className="w-full">
+                Turn your reading time into learning time with fellow tech
+                enthusiats. Get curated recommendations, join vibrant
+                discussions, and level up your skills. one chapter at a time.
+              </p>
+              <a
+                href="#contact"
+                className="inline-block mt-3 px-6 py-3 bg-inherit border-2
+                 dark:border-white  font-semibold rounded
+                 hover:bg-blue-700"
+              >
+                REVIEW MEMBERSHIP OPTIONS <span className="mx-4 ">&darr;</span>
+              </a>
+              <div className="grid grid-cols-10 place-items-center mt-3">
+                <Image
+                  src="/images/human1.png"
+                  alt="human1"
+                  className=" rounded-lg"
+                  width={30}
+                  height={30}
+                />
+                <Image
+                  src="/images/human2.png"
+                  alt="human2"
+                  className=" rounded-lg"
+                  width={30}
+                  height={30}
+                />
+                <Image
+                  src="/images/human3.png"
+                  alt="human3"
+                  className="rounded-lg"
+                  width={30}
+                  height={30}
+                />
+                <div className="col-span-7 text-left">
+                  <div>STARS</div>
+                  <p>200+ developers joined already</p>
+                </div>
+              </div>
+            </div>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/images/colabo4.jpg"
+              alt="Tech Team"
+              className=" rounded-lg"
+              width={480}
+              height={480}
             />
-            Deploy now
-          </a>
+          </section>
+
+          <section id="about" className="mt-16 ">
+            <div className="grid grid-cols-2 gap-4 place-items-center">
+              <Image
+                src="/images/colabo1.jpg"
+                alt="Tech Team"
+                className="rounded-lg"
+                width={480}
+                height={480}
+              />
+              <div>
+                <h3 className="text-2xl mt-3 md:text-4xl lg:text-5xl  ">
+                  Read together, grow Together
+                </h3>
+                <div className="grid grid-cols-8 gap-2 place-items-center">
+                  <Image
+                    src="/icons/checkbox.svg"
+                    alt="checkbox"
+                    className="col-span-1"
+                    width={20}
+                    height={20}
+                  />
+                   <p className="mt-3 col-span-7 ">
+                    Monthly curated tech reads selected by industary experts
+                  </p>
+                </div>
+                <div className="grid grid-cols-8 gap-2 place-items-center">
+                  <Image
+                    src="/icons/checkbox.svg"
+                    alt="checkbox"
+                    className="col-span-1"
+                    width={20}
+                    height={20}
+                  />
+                   <p className="mt-3 col-span-7 ">
+                    Monthly curated tech reads selected by industary experts
+                  </p>
+                </div>
+                <div className="grid grid-cols-8 gap-2 place-items-center">
+                  <Image
+                    src="/icons/checkbox.svg"
+                    alt="checkbox"
+                    className="col-span-1"
+                    width={20}
+                    height={20}
+                  />
+                   <p className="mt-3 col-span-7 ">
+                    Monthly curated tech reads selected by industary experts
+                  </p>
+                </div>
+                <div className="grid grid-cols-8 gap-2 place-items-center">
+                  <Image
+                    src="/icons/checkbox.svg"
+                    alt="checkbox"
+                    className="col-span-1"
+                    width={20}
+                    height={20}
+                  />
+                   <p className="mt-3 col-span-7 ">
+                    Monthly curated tech reads selected by industary experts
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-16 grid grid-cols-2 gap-4 place-items-center">
+              <div>
+                <h3 className="text-2xl mt-3 md:text-4xl lg:text-5xl  ">Not your average book club</h3>
+                <p>
+                  Connect with a community that speaks your language from{" "}
+                  <strong>Python</strong> to <strong>Typescript</strong> and
+                  everything in between. Our discussion blend technical depth
+                  with pratical applications.
+                </p>
+              </div>
+
+              <Image
+                src="/images/colabo3.jpg"
+                alt="Tech Team"
+                className="lg:w-1/2 rounded-lg"
+                width={300}
+                height={200}
+              />
+              <div className="col-span-2">some svgs</div>
+            </div>
+          </section>
+          <section>
+            <h3>Your tech reading journey</h3>
+            <div>
+              <div>
+                <p>Choose your membership tier</p>
+              </div>
+              <div>
+                <p>Choose your membership tier</p>
+              </div>
+              <div>
+                <p>Choose your membership tier</p>
+              </div>
+              <div>
+                <p>Choose your membership tier</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="services" className="mt-16">
+            <h3 className="text-2xl font-semibold text-gray-800">
+              Membership options
+            </h3>
+            <div>
+              <div>
+                <h4>Starter</h4>
+                <p>
+                  <strong>$19</strong>/month
+                </p>
+                <hr></hr>
+                <div>
+                  svg
+                  <p>1 book/month</p>
+                </div>
+                <div>
+                  svg
+                  <p>Online forums</p>
+                </div>
+                <a href="#">SUBSCRIBE NOW</a>
+              </div>
+              <div>
+                <h4>Starter</h4>
+                <p>
+                  <strong>$19</strong>/month
+                </p>
+                <hr></hr>
+                <div>
+                  svg
+                  <p>1 book/month</p>
+                </div>
+                <div>
+                  svg
+                  <p>Online forums</p>
+                </div>
+                <a href="#">SUBSCRIBE NOW</a>
+              </div>
+              <div>
+                <h4>Starter</h4>
+                <p>
+                  <strong>$19</strong>/month
+                </p>
+                <hr></hr>
+                <div>
+                  svg
+                  <p>1 book/month</p>
+                </div>
+                <div>
+                  svg
+                  <p>Online forums</p>
+                </div>
+                <a href="#">SUBSCRIBE NOW</a>
+              </div>
+            </div>
+          </section>
+
+          <section id="testimony" className="mt-16">
+            <h4 className="mt-4 ">
+              This book club transformed my technical reading from a solitary
+              activit into an enriching community experience. The discussions
+              are gold!
+            </h4>
+            <p className="">Sarah Chen, Software Architect</p>
+          </section>
+        </main>
+
+        <footer className="bg-gray-200 py-6 mt-16">
+          <h3 className="text-2xl font-semibold text-gray-800">
+            Ready to debug your reading list?
+          </h3>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700"
           >
-            Read our docs
+            REVIEW MEMBERSHIP OPTIONS
           </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <div>
+            <img src="#" alt="placeholder" className="lg:hidden rounded-lg" />
+            <img src="#" alt="placeholder" className="lg:hidden rounded-lg" />
+            <img src="#" alt="placeholder" className="lg:hidden rounded-lg" />
+            <div>
+              <div>STARS</div>
+              <p>200+ developers joined already</p>
+            </div>
+          </div>
+          <div>
+            <p className="text-center text-gray-600">
+              &copy; {new Date().getFullYear()} - Tech Book Club. All rights
+              reserved.
+            </p>
+            <div>svgs</div>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }
