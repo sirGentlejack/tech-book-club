@@ -1,5 +1,14 @@
 import Image from "next/image";
 import Head from "next/head";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faTwitter,
+  faGithub,
+  faReact,
+  faPython,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
@@ -47,30 +56,53 @@ export default function Home() {
               >
                 REVIEW MEMBERSHIP OPTIONS <span className="mx-4 ">&darr;</span>
               </a>
-              <div className="grid grid-cols-10 place-items-center mt-3">
+              <div className="grid grid-cols-10 place-items-center mt-3 ">
+                 
                 <Image
                   src="/images/human1.png"
                   alt="human1"
-                  className=" rounded-lg"
+                  className="col-span-1 rounded-lg -z-20"
                   width={30}
                   height={30}
                 />
                 <Image
                   src="/images/human2.png"
                   alt="human2"
-                  className=" rounded-lg"
+                  className=" rounded-lg -z-10"
                   width={30}
                   height={30}
                 />
                 <Image
                   src="/images/human3.png"
                   alt="human3"
-                  className="rounded-lg"
+                  className="rounded-lg -z-0"
                   width={30}
                   height={30}
                 />
+                
                 <div className="col-span-7 text-left">
-                  <div>STARS</div>
+                  <div className="grid grid-cols-10 gap-1">
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      style={{ color: "#FFD43B" }}
+                    />
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      style={{ color: "#FFD43B" }}
+                    />
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      style={{ color: "#FFD43B" }}
+                    />
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      style={{ color: "#FFD43B" }}
+                    />
+                    <FontAwesomeIcon
+                      icon={faStar}
+                      style={{ color: "#FFD43B" }}
+                    />
+                  </div>
                   <p>200+ developers joined already</p>
                 </div>
               </div>
@@ -105,7 +137,7 @@ export default function Home() {
                     width={20}
                     height={20}
                   />
-                   <p className="mt-3 col-span-7 ">
+                  <p className="mt-3 col-span-7 ">
                     Monthly curated tech reads selected by industary experts
                   </p>
                 </div>
@@ -117,7 +149,7 @@ export default function Home() {
                     width={20}
                     height={20}
                   />
-                   <p className="mt-3 col-span-7 ">
+                  <p className="mt-3 col-span-7 ">
                     Monthly curated tech reads selected by industary experts
                   </p>
                 </div>
@@ -129,7 +161,7 @@ export default function Home() {
                     width={20}
                     height={20}
                   />
-                   <p className="mt-3 col-span-7 ">
+                  <p className="mt-3 col-span-7 ">
                     Monthly curated tech reads selected by industary experts
                   </p>
                 </div>
@@ -141,7 +173,7 @@ export default function Home() {
                     width={20}
                     height={20}
                   />
-                   <p className="mt-3 col-span-7 ">
+                  <p className="mt-3 col-span-7 ">
                     Monthly curated tech reads selected by industary experts
                   </p>
                 </div>
@@ -149,10 +181,12 @@ export default function Home() {
             </div>
             <div className="mt-16 grid grid-cols-2 gap-4 place-items-center">
               <div>
-                <h3 className="text-2xl mt-3 md:text-4xl lg:text-5xl  ">Not your average book club</h3>
+                <h3 className="text-2xl mt-3 leading-5 md:text-4xl lg:text-5xl  ">
+                  Not your average <br></br> book club
+                </h3>
                 <p>
-                  Connect with a community that speaks your language from{" "}
-                  <strong>Python</strong> to <strong>Typescript</strong> and
+                  Connect with a community that speaks your language from
+                  <strong> Python</strong> to <strong>Typescript</strong> and
                   everything in between. Our discussion blend technical depth
                   with pratical applications.
                 </p>
@@ -161,122 +195,267 @@ export default function Home() {
               <Image
                 src="/images/colabo3.jpg"
                 alt="Tech Team"
-                className="lg:w-1/2 rounded-lg"
-                width={300}
-                height={200}
+                className=" rounded-lg"
+                width={480}
+                height={480}
               />
-              <div className="col-span-2">some svgs</div>
+              <div className="col-span-2">
+                <FontAwesomeIcon icon={faReact} />
+                <FontAwesomeIcon icon={faGithub} />
+                <FontAwesomeIcon icon={faPython} />
+              </div>
             </div>
           </section>
-          <section>
-            <h3>Your tech reading journey</h3>
-            <div>
-              <div>
-                <p>Choose your membership tier</p>
+          <section className="bg-local bg-[url('/images/bg.jpg')] py-11 bg-cover bg-center bg-no-repeat rounded">
+            <h3 className="text-2xl mt-6 text-center leading-5 md:text-4xl lg:text-5xl  ">
+              Your tech <br></br>reading journey
+            </h3>
+            <div className="grid grid-cols-4 gap-4 place-items-center mt-6 px-6">
+              <div className="grid grid-cols-2 ">
+                <Image
+                  src="/icons/square-1.svg"
+                  alt="number1box"
+                  className="col-span-1"
+                  width={20}
+                  height={20}
+                />
+                <Image
+                  src="/icons/turn-right.svg"
+                  alt="checkbox"
+                  className="col-span-1 "
+                  width={20}
+                  height={20}
+                />
+                <p className="mt-2 col-span-2">Choose your membership tier</p>
+              </div>
+              <div className="grid grid-cols-2 ">
+                <Image
+                  src="/icons/square-2.svg"
+                  alt="number2box"
+                  className="col-span-1"
+                  width={20}
+                  height={20}
+                />
+                <Image
+                  src="/icons/turn-right.svg"
+                  alt="checkbox"
+                  className="col-span-1"
+                  width={20}
+                  height={20}
+                />
+                <p className="mt-2 col-span-2">Choose your membership tier</p>
+              </div>
+              <div className="grid grid-cols-2 ">
+                <Image
+                  src="/icons/square-3.svg"
+                  alt="number3box"
+                  className="col-span-1"
+                  width={20}
+                  height={20}
+                />
+                <Image
+                  src="/icons/turn-right.svg"
+                  alt="checkbox"
+                  className="col-span-1"
+                  width={20}
+                  height={20}
+                />
+                <p className="mt-2 col-span-2">Choose your membership tier</p>
               </div>
               <div>
-                <p>Choose your membership tier</p>
-              </div>
-              <div>
-                <p>Choose your membership tier</p>
-              </div>
-              <div>
-                <p>Choose your membership tier</p>
+                <Image
+                  src="/icons/square-4.svg"
+                  alt="number4box"
+                  className="col-span-1"
+                  width={20}
+                  height={20}
+                />
+
+                <p className="mt-2">Choose your membership tier</p>
               </div>
             </div>
           </section>
 
           <section id="services" className="mt-16">
-            <h3 className="text-2xl font-semibold text-gray-800">
+            <h3 className="text-2xl mt-6 text-center leading-5 md:text-4xl lg:text-5xl  ">
               Membership options
             </h3>
-            <div>
-              <div>
-                <h4>Starter</h4>
+            <div className="grid grid-cols-12 gap-1 place-items-center mt-6">
+              <div className="border px-3 py-3 rounded-lg col-span-4 leading-7">
+                <h4 className="text-xl">Starter</h4>
                 <p>
-                  <strong>$19</strong>/month
+                  <span className="text-3xl">$19</span> /month
                 </p>
                 <hr></hr>
-                <div>
-                  svg
-                  <p>1 book/month</p>
+                <div className="grid grid-cols-4 gap-1 mt-2">
+                  <Image
+                    src="/icons/checkbox.svg"
+                    alt="checkbox"
+                    className="col-span-1"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="col-span-3">1 book/month</p>
                 </div>
-                <div>
-                  svg
-                  <p>Online forums</p>
+                <div className="grid grid-cols-4 gap-1 ">
+                  <Image
+                    src="/icons/checkbox.svg"
+                    alt="checkbox"
+                    className="col-span-1"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="col-span-3">Online forums</p>
                 </div>
-                <a href="#">SUBSCRIBE NOW</a>
+                <a
+                  href="#"
+                  className="inline-block mt-3 px-7 py-2 bg-inherit border-2"
+                >
+                  SUBSCRIBE NOW
+                </a>
               </div>
-              <div>
-                <h4>Starter</h4>
+              <div className="border px-4 py-5 rounded-lg col-span-4 leading-7">
+                <h4 className="text-xl">Pro</h4>
                 <p>
-                  <strong>$19</strong>/month
+                  <span className="text-3xl">$29</span> /month
                 </p>
                 <hr></hr>
-                <div>
-                  svg
-                  <p>1 book/month</p>
+                <div className="grid grid-cols-4 gap-1 mt-2">
+                  <Image
+                    src="/icons/checkbox.svg"
+                    alt="checkbox"
+                    className="col-span-1"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="col-span-3">1 book/month</p>
                 </div>
-                <div>
-                  svg
-                  <p>Online forums</p>
+                <div className="grid grid-cols-4 gap-1 ">
+                  <Image
+                    src="/icons/checkbox.svg"
+                    alt="checkbox"
+                    className="col-span-1"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="col-span-3">Online forums</p>
                 </div>
-                <a href="#">SUBSCRIBE NOW</a>
+                <a
+                  href="#"
+                  className="inline-block mt-3 px-7 py-2 bg-inherit border-2"
+                >
+                  SUBSCRIBE NOW
+                </a>
               </div>
-              <div>
-                <h4>Starter</h4>
+              <div className="border px-3 py-3 rounded-lg col-span-4 leading-7 ">
+                <h4 className="text-xl">Enterprise</h4>
                 <p>
-                  <strong>$19</strong>/month
+                  <span className="text-3xl">Custom</span>
                 </p>
                 <hr></hr>
-                <div>
-                  svg
-                  <p>1 book/month</p>
+                <div className="grid grid-cols-4 gap-1 mt-2">
+                  <Image
+                    src="/icons/checkbox.svg"
+                    alt="checkbox"
+                    className="col-span-1"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="col-span-3">1 book/month</p>
                 </div>
-                <div>
-                  svg
-                  <p>Online forums</p>
+                <div className="grid grid-cols-4 gap-1 ">
+                  <Image
+                    src="/icons/checkbox.svg"
+                    alt="checkbox"
+                    className="col-span-1"
+                    width={20}
+                    height={20}
+                  />
+                  <p className="col-span-3">Online forums</p>
                 </div>
-                <a href="#">SUBSCRIBE NOW</a>
+                <a
+                  href=""
+                  className="inline-block mt-3 px-7 py-2 bg-inherit border-2"
+                >
+                  Talk To Us
+                </a>
               </div>
             </div>
           </section>
 
           <section id="testimony" className="mt-16">
-            <h4 className="mt-4 ">
-              This book club transformed my technical reading from a solitary
-              activit into an enriching community experience. The discussions
-              are gold!
+            <div className="flex gap-1 justify-center ">
+              <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+              <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+            </div>
+            <h4 className="text-xl mt-4 text-center max-w-lg mx-auto">
+              &#34;This book club transformed my technical reading from a
+              solitary activit into an enriching community experience. The
+              discussions are gold!&#34;
             </h4>
-            <p className="">Sarah Chen, Software Architect</p>
+            <p className="text-center">Sarah Chen, Software Architect</p>
           </section>
         </main>
 
-        <footer className="bg-gray-200 py-6 mt-16">
-          <h3 className="text-2xl font-semibold text-gray-800">
-            Ready to debug your reading list?
-          </h3>
-          <a
-            href="#contact"
-            className="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700"
-          >
-            REVIEW MEMBERSHIP OPTIONS
-          </a>
-          <div>
-            <img src="#" alt="placeholder" className="lg:hidden rounded-lg" />
-            <img src="#" alt="placeholder" className="lg:hidden rounded-lg" />
-            <img src="#" alt="placeholder" className="lg:hidden rounded-lg" />
-            <div>
-              <div>STARS</div>
-              <p>200+ developers joined already</p>
+        <footer className="bg-emerald-900 py-6 mt-16 ">
+          <div className="flex flex-col items-center gap-3">
+            <h3 className="text-2xl mt-6 text-center leading-5 md:text-4xl lg:text-5xl  ">
+              Ready to debug your <br></br> reading list?
+            </h3>
+            <a
+              href="#contact"
+              className="inline-block mt-3 px-7 py-2 bg-inherit border-2 "
+            >
+              REVIEW MEMBERSHIP OPTIONS
+            </a>
+            <div className="grid grid-cols-10 place-items-center mt-3">
+              <Image
+                src="/images/human1.png"
+                alt="human1"
+                className=" rounded-lg"
+                width={30}
+                height={30}
+              />
+              <Image
+                src="/images/human2.png"
+                alt="human2"
+                className=" rounded-lg"
+                width={30}
+                height={30}
+              />
+              <Image
+                src="/images/human3.png"
+                alt="human3"
+                className="rounded-lg"
+                width={30}
+                height={30}
+              />
+              <div className="col-span-7 text-left">
+                <div className="grid grid-cols-10 gap-1">
+                  <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+                  <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+                  <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+                  <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+                  <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+                </div>
+                <p>200+ developers joined already</p>
+              </div>
             </div>
           </div>
-          <div>
-            <p className="text-center text-gray-600">
+          <hr className="w-full mt-2 mb-2"></hr>
+          <div className="flex flex-row justify-between gap-3 px-4">
+            <p className="">
               &copy; {new Date().getFullYear()} - Tech Book Club. All rights
               reserved.
             </p>
-            <div>svgs</div>
+            <div>
+              <FontAwesomeIcon icon={faLinkedin} />
+              <FontAwesomeIcon icon={faTwitter} />
+              <FontAwesomeIcon icon={faGithub} />
+            </div>
           </div>
         </footer>
       </div>
